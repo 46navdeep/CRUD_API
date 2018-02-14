@@ -40,19 +40,6 @@ app.post('/ttt',function(req,res){
   })
 });
 
-// app.get('/:id',function(req,res){
-//   Todo.find({_id:req.params.id}).exec((err,todo) => {
-//     if(err){
-//     return res.json({'success':false,'message':'Some Error'});
-//     }
-//     if(todo.length){
-//       return res.json({'success':true,'message':'Todo fetched by id successfully',todo});
-//     }
-//     else{
-//       return res.json({'success':false,'message':'Todo with the given id not found'});
-//     }
-//   })
-// });
 
 app.delete('/hastobedeleated/:id',function(req,res){
   Todo.findByIdAndRemove(req.params.id, (err,todo) => {
